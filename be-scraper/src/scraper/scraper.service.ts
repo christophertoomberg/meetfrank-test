@@ -17,7 +17,7 @@ export class ScraperService {
       console.log('DB empty, scraping and populating');
       await this.insertScrapedJobs();
     }
-    console.log('DB populated, serving from');
+    console.log('DB populated, serving from there');
     return await this.scraperRepository.find();
   }
 
@@ -57,7 +57,7 @@ export class ScraperService {
         scrapedPostings.push(data);
       });
 
-      return scrapedPostings.slice();
+      return scrapedPostings;
     });
 
     await browser.close();
