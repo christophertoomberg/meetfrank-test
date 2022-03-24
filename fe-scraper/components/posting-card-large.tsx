@@ -10,7 +10,7 @@ export default function PostingCardLarge({ posting }: any) {
             <h5>{posting.title}</h5>
             <p>Location: {posting.location}</p>
             <p className={styles.description}>{posting.description}</p>
-            <a className={styles.applyButton} href={posting.applyButtonUrl}>Apply</a>
+            <a target={'_blank'} rel={'noreferrer'} className={styles.applyButton} href={posting.applyButtonUrl}>Apply</a>
         </div>
     );
 }
