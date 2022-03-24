@@ -3,7 +3,7 @@ import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
 @ObjectType()
-export class ScrapedData {
+export class Posting {
   @PrimaryGeneratedColumn()
   @Field(() => Int)
   id: number;
@@ -15,6 +15,10 @@ export class ScrapedData {
   @Column()
   @Field()
   location: string;
+
+  @Column()
+  @Field()
+  description: string;
 
   @Column()
   @Field()

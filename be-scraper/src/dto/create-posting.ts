@@ -1,7 +1,7 @@
 import { Field, InputType } from '@nestjs/graphql';
 
 @InputType()
-export class CreateScrapedDataInput {
+export class CreatePosting {
   @Field()
   title: string;
 
@@ -9,5 +9,8 @@ export class CreateScrapedDataInput {
   location: string;
 
   @Field()
-  applyJobUrl: string;
+  description: string;
+
+  @Field()
+  applyButtonUrl: string;
 }

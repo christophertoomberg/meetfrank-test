@@ -2,13 +2,15 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
 
-type ScrapedData {
+type Posting {
   id: Int!
   title: String!
   location: String!
+  description: String!
   applyButtonUrl: String!
 }
 
 type Query {
-  scrapedData: [ScrapedData!]!
+  postings: [Posting!]!
+  getPosting(id: Int!): Posting!
 }

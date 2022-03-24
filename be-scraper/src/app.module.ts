@@ -5,7 +5,7 @@ import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { join } from 'path';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { ScraperModule } from './scraper/scraper.module';
+import { PostingModule } from './postings/posting.module';
 
 @Module({
   imports: [
@@ -19,7 +19,7 @@ import { ScraperModule } from './scraper/scraper.module';
       entities: ['dist/**/*.entity{.ts,.js}'],
       synchronize: true,
     }),
-    ScraperModule,
+    PostingModule,
   ],
   controllers: [AppController],
   providers: [AppService],
